@@ -3,7 +3,7 @@
 @theme {
   --color-ink: #171b2c;
   --color-muted: #656770;
-  --color-subtle: #6d7384;
+  --color-subtle: #6a7081;
   --color-on-ink: #9e9faa;
   --color-cream: #f9f8f3;
   --color-primary: #3157f6;
@@ -66,6 +66,25 @@
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(32px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@utility reveal {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
     }
   }
 }

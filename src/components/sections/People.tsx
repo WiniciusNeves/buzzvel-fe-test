@@ -51,6 +51,7 @@ export function People() {
                 src={photo.src}
                 alt={photo.alt}
                 fill
+                quality={90}
                 sizes={`(min-width: 1024px) ${photo.width}px, ${Math.round((photo.width / collageFrame.width) * 100)}vw`}
                 className="object-cover"
               />

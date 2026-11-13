@@ -26,6 +26,7 @@ export function Testimonial() {
               alt=""
               width={48}
               height={48}
+              unoptimized
               className="size-12 rounded-full object-cover"
             />
             <span>

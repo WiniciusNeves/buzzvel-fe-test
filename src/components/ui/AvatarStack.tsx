@@ -24,6 +24,7 @@ export function AvatarStack({
             alt={avatar.alt}
             width={size}
             height={size}
+            unoptimized
             className={cn("rounded-full object-cover ring-2", ringClassName)}
             style={{ width: size, height: size }}
           />

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Luma",
     title: "Luma — Practical courses that move you forward",
     description: "Short, practical courses designed around skills you can put to work immediately.",
-    images: [{ url: "/images/hero-learner.webp", alt: "Learner smiling at her laptop" }],
+    images: [{ url: "/images/hero-learner.jpg", alt: "Learner smiling at her laptop" }],
   },
   twitter: {
     card: "summary_large_image",

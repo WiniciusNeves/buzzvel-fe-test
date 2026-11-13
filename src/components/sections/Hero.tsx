@@ -52,9 +52,10 @@ export function Hero() {
           />
           <div className="relative aspect-[346/380] overflow-hidden rounded-[20px] md:aspect-[4/3] lg:aspect-[500/520] lg:rounded-3xl">
             <Image
-              src="/images/hero-learner.webp"
+              src="/images/hero-learner.jpg"
               alt="Smiling learner with glasses following a lesson on her laptop"
               fill
+              quality={90}
               loading="eager"
               fetchPriority="high"
               sizes="(min-width: 1024px) 500px, (min-width: 768px) 672px, calc(100vw - 56px)"

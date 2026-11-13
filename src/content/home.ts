@@ -1,14 +1,14 @@
 import type { ImageAsset } from "@/types/media";
 
 export const learnerAvatars = [
-  { src: "/images/avatars/avatar-1.webp", alt: "Smiling learner with her hair tied up" },
-  { src: "/images/avatars/avatar-2.webp", alt: "Learner with short dark hair smiling" },
-  { src: "/images/avatars/avatar-3.webp", alt: "Learner in a dark suit" },
+  { src: "/images/avatars/avatar-1.jpg", alt: "Smiling learner with her hair tied up" },
+  { src: "/images/avatars/avatar-2.jpg", alt: "Learner with short dark hair smiling" },
+  { src: "/images/avatars/avatar-3.jpg", alt: "Learner in a dark suit" },
 ] as const satisfies readonly ImageAsset[];
 
 export const communityAvatars = [
   ...learnerAvatars,
-  { src: "/images/avatars/avatar-4.webp", alt: "Learner with long dark hair" },
+  { src: "/images/avatars/avatar-4.jpg", alt: "Learner with long dark hair" },
 ] as const satisfies readonly ImageAsset[];
 
 export type Category = {
@@ -52,7 +52,7 @@ export const featuredCourse = {
   instructor: { name: "Maya Chen", role: "Senior Product Designer" },
   facts: ["8 lessons", "2h 40min", "Intermediate"],
   image: {
-    src: "/images/featured-course.webp",
+    src: "/images/featured-course.jpg",
     alt: "Designer arranging colourful material samples and prototypes on a worktable",
   },
 } as const;
@@ -95,7 +95,7 @@ export const testimonial = {
   author: {
     name: "Alex Morgan",
     role: "Product Manager",
-    avatar: { src: "/images/avatars/alex-morgan.webp", alt: "Alex Morgan" },
+    avatar: { src: "/images/avatars/alex-morgan.jpg", alt: "Alex Morgan" },
   },
 } as const;
 
@@ -123,7 +123,7 @@ export const collageFrame = { width: 530, height: 522 } as const;
 
 export const collagePhotos = [
   {
-    src: "/images/people/student-waving.webp",
+    src: "/images/people/student-waving.jpg",
     alt: "Student waving during an online class",
     x: 35,
     y: 106,
@@ -131,7 +131,7 @@ export const collagePhotos = [
     height: 154,
   },
   {
-    src: "/images/people/study-group.webp",
+    src: "/images/people/study-group.jpg",
     alt: "Group of students working together around a laptop",
     x: 0,
     y: 273,
@@ -139,7 +139,7 @@ export const collagePhotos = [
     height: 207,
   },
   {
-    src: "/images/people/student-reading.webp",
+    src: "/images/people/student-reading.jpg",
     alt: "Student in a hoodie reading a book",
     x: 154,
     y: 26,
@@ -147,7 +147,7 @@ export const collagePhotos = [
     height: 170,
   },
   {
-    src: "/images/people/music-lesson.webp",
+    src: "/images/people/music-lesson.jpg",
     alt: "Teacher and student singing together during a music lesson",
     x: 154,
     y: 209,
@@ -155,7 +155,7 @@ export const collagePhotos = [
     height: 172,
   },
   {
-    src: "/images/people/student-notes.webp",
+    src: "/images/people/student-notes.jpg",
     alt: "Student taking notes next to a tablet",
     x: 154,
     y: 394,
@@ -163,7 +163,7 @@ export const collagePhotos = [
     height: 128,
   },
   {
-    src: "/images/people/graduate.webp",
+    src: "/images/people/graduate.jpg",
     alt: "Graduate in cap and gown holding a diploma",
     x: 273,
     y: 34,
@@ -171,7 +171,7 @@ export const collagePhotos = [
     height: 137,
   },
   {
-    src: "/images/people/home-office.webp",
+    src: "/images/people/home-office.jpg",
     alt: "Learner studying at a desk at home",
     x: 273,
     y: 184,
@@ -179,7 +179,7 @@ export const collagePhotos = [
     height: 138,
   },
   {
-    src: "/images/people/video-call.webp",
+    src: "/images/people/video-call.jpg",
     alt: "Teacher giving a lesson over a video call",
     x: 273,
     y: 335,
@@ -187,7 +187,7 @@ export const collagePhotos = [
     height: 154,
   },
   {
-    src: "/images/people/student-campus.webp",
+    src: "/images/people/student-campus.jpg",
     alt: "Student holding folders on campus",
     x: 391,
     y: 86,
@@ -195,7 +195,7 @@ export const collagePhotos = [
     height: 205,
   },
   {
-    src: "/images/people/student-hijab.webp",
+    src: "/images/people/student-hijab.jpg",
     alt: "Student with a coffee cup and a book",
     x: 391,
     y: 304,

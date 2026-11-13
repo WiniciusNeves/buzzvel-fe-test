@@ -6,47 +6,47 @@ Reference renders: `docs/figma-ref/` (`d-*` desktop, `m-*` mobile).
 
 ## Layout grid
 
-| | Desktop (1280) | Mobile (402) |
-|---|---|---|
-| Content width | 1120 (80px side padding) | 362 (20px side padding) |
-| Section vertical padding | 100px | 60px |
-| Header height | 70 | 68 |
-| Two-column gap | ~60px (560 + 60 + 500) | stacked |
+|                          | Desktop (1280)           | Mobile (402)            |
+| ------------------------ | ------------------------ | ----------------------- |
+| Content width            | 1120 (80px side padding) | 362 (20px side padding) |
+| Section vertical padding | 100px                    | 60px                    |
+| Header height            | 70                       | 68                      |
+| Two-column gap           | ~60px (560 + 60 + 500)   | stacked                 |
 
 Tablet (768–1023) is not designed → interpolated: 2-col grids collapse to stacked or 2-up, 40px gutters.
 
 ## Color tokens (sampled from renders)
 
-| Token | Hex | Use |
-|---|---|---|
-| `ink` | `#171B2C` | headings, footer bg |
-| `body` | ~`#6B6F80` | paragraphs (to confirm) |
-| `cream` | `#F9F8F3` | page bg (hero, how, people), inputs, contact cards |
-| `white` | `#FFFFFF` | categories, testimonial, contact bg, cards |
-| `primary` | `#3157F6` | primary buttons, eyebrows, stats, featured bg |
-| `primary-soft` | `#E2E8FF` | chips, number badges, decorative circles |
-| `sun` | `#FFEE7E` | featured badge, "View course" button |
-| `sun-soft` | `#FFF1C2` | final CTA bg, step 3 tile |
-| `peach` | `#FFCB9F` | hero accent block, CTA shapes |
-| `coral` | `#FF704D` | step 2 dot |
-| `line` | `#DBDFEB` | card/input borders |
+| Token          | Hex        | Use                                                |
+| -------------- | ---------- | -------------------------------------------------- |
+| `ink`          | `#171B2C`  | headings, footer bg                                |
+| `body`         | ~`#6B6F80` | paragraphs (to confirm)                            |
+| `cream`        | `#F9F8F3`  | page bg (hero, how, people), inputs, contact cards |
+| `white`        | `#FFFFFF`  | categories, testimonial, contact bg, cards         |
+| `primary`      | `#3157F6`  | primary buttons, eyebrows, stats, featured bg      |
+| `primary-soft` | `#E2E8FF`  | chips, number badges, decorative circles           |
+| `sun`          | `#FFEE7E`  | featured badge, "View course" button               |
+| `sun-soft`     | `#FFF1C2`  | final CTA bg, step 3 tile                          |
+| `peach`        | `#FFCB9F`  | hero accent block, CTA shapes                      |
+| `coral`        | `#FF704D`  | step 2 dot                                         |
+| `line`         | `#DBDFEB`  | card/input borders                                 |
 
 ## Typography
 
-- Display / headings: geometric grotesque, tight tracking → **Plus Jakarta Sans** (ExtraBold/Bold) — *to confirm in Figma*.
-- Body / UI: **Inter** — *to confirm*.
+- Display / headings: **Plus Jakarta Sans** (ExtraBold/Bold), tight tracking — confirmed.
+- Body / UI: **Inter** — confirmed.
 
-| Role | Desktop | Mobile |
-|---|---|---|
-| H1 (hero) | ~64 / 70, 3 lines | ~40 / 44 |
-| H2 (section) | ~48–52 / 56 | ~32 / 36 |
-| Final CTA H2 | ~56 / 64 | ~40 / 56 |
-| Testimonial quote | ~30 / 44 | ~20 / 32 |
-| Stats | ~64 / 70 | ~40 |
-| H3 (card/step) | 20 / 32 | 20 / 28 |
-| Lead paragraph | 18 / 28 | 16 / 26 |
-| Body | 16 / 24, small 14 / 24 | same |
-| Eyebrow | 12 / 16, uppercase, wide tracking, primary | same |
+| Role              | Desktop                                    | Mobile   |
+| ----------------- | ------------------------------------------ | -------- |
+| H1 (hero)         | ~64 / 70, 3 lines                          | ~40 / 44 |
+| H2 (section)      | ~48–52 / 56                                | ~32 / 36 |
+| Final CTA H2      | ~56 / 64                                   | ~40 / 56 |
+| Testimonial quote | ~30 / 44                                   | ~20 / 32 |
+| Stats             | ~64 / 70                                   | ~40      |
+| H3 (card/step)    | 20 / 32                                    | 20 / 28  |
+| Lead paragraph    | 18 / 28                                    | 16 / 26  |
+| Body              | 16 / 24, small 14 / 24                     | same     |
+| Eyebrow           | 12 / 16, uppercase, wide tracking, primary | same     |
 
 ## Sections (desktop order)
 
@@ -61,6 +61,13 @@ Tablet (768–1023) is not designed → interpolated: 2-col grids collapse to st
 9. **Final CTA** (sun-soft bg) — 4 avatars, H2 "What will you learn next?", subtitle, "Explore all courses" + "Join Luma", decorative peach shapes/line icons.
 10. **Footer** (ink bg) — logo + tagline, 3 link columns (Explore / Company / Support), divider, © 2026 Luma Learning.
 
+## Mobile layout notes (from full-page mobile export)
+
+- People: text block + outline button first, collage below (4 staggered columns over the lavender circle).
+- Contact: info cards stacked above the form card (form padding 20px).
+- Final CTA: full-width stacked buttons; decorative shapes hidden.
+- Footer: logo + tagline; Explore and Company side by side; Support below; divider + copyright.
+
 ## Interactions (inferred — design shows static states)
 
 - Mobile nav toggle (open/close, Esc, focus management, scroll lock).
@@ -73,6 +80,7 @@ Tablet (768–1023) is not designed → interpolated: 2-col grids collapse to st
 
 - Desktop "How it works" shows **STEP 01** on all three steps; mobile shows 01/02/03 → use 01/02/03.
 - Step 2 copy differs ("who use these skills" vs "who actually use these skills") → use desktop copy.
+- Mobile contact form labels/placeholders are in Portuguese ("Nome completo", "Sua dúvida", "Enviar mensagem"); desktop is English → use English everywhere.
 - People paragraph is lorem ipsum → keep as in design? (decide) / replace with real copy and note it.
 - Header nav targets are not specified → map to on-page anchors where a section exists.
 

@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     qualities: [75, 90],
   },
   turbopack: {
+    root: __dirname,
     rules: {
       "*.css": {
         loaders: ["@tailwindcss/turbopack"],

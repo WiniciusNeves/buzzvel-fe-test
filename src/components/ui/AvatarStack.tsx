@@ -1,13 +1,9 @@
 import Image from "next/image";
 import { cn } from "@/lib/cn";
-
-export type Avatar = {
-  readonly src: string;
-  readonly alt: string;
-};
+import type { ImageAsset } from "@/types/media";
 
 type AvatarStackProps = {
-  avatars: readonly Avatar[];
+  avatars: readonly ImageAsset[];
   size: number;
   ringClassName?: string;
   className?: string;

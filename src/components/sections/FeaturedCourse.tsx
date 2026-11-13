@@ -19,6 +19,7 @@ export function FeaturedCourse() {
             src={featuredCourse.image.src}
             alt={featuredCourse.image.alt}
             fill
+            quality={90}
             sizes="(min-width: 1024px) 538px, (min-width: 768px) 688px, calc(100vw - 40px)"
             className="object-cover"
           />
@@ -55,9 +56,7 @@ export function FeaturedCourse() {
           <ButtonLink href="#contact" variant="sun" className="w-full sm:w-auto">
             View course
           </ButtonLink>
-          <ArrowLink href="#categories" className="text-sm">
-            Browse all courses
-          </ArrowLink>
+          <ArrowLink href="#categories">Browse all courses</ArrowLink>
         </div>
       </div>
     </Section>

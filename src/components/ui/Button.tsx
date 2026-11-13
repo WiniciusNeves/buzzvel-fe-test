@@ -20,7 +20,7 @@ const variantClassName = {
 
 const sizeClassName = {
   md: "h-11 px-5 text-sm",
-  lg: "h-[52px] px-7 text-[0.9375rem] lg:h-[54px]",
+  lg: "h-[52px] px-7 text-[0.9375rem]",
 } as const satisfies Record<ButtonSize, string>;
 
 export function buttonClassName({

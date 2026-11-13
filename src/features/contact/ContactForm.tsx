@@ -101,7 +101,7 @@ export function ContactForm({ submitRequest = submitContactRequest }: ContactFor
         />
       </div>
 
-      <Button type="submit" fullWidth disabled={isSubmitting} className="mt-6 lg:h-[52px]">
+      <Button type="submit" fullWidth disabled={isSubmitting} className="mt-6">
         {isSubmitting ? "Sending…" : "Send message"}
       </Button>
 

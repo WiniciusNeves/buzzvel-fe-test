@@ -7,6 +7,7 @@ import { CloseIcon, MenuIcon } from "@/components/ui/icons";
 import { headerActions, primaryNav } from "@/content/navigation";
 
 const DESKTOP_QUERY = "(min-width: 1024px)";
+const BACKGROUND_SELECTOR = "main, footer";
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +19,10 @@ export function MobileMenu() {
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    const background = Array.from(document.querySelectorAll<HTMLElement>(BACKGROUND_SELECTOR));
+    background.forEach((element) => {
+      element.setAttribute("inert", "");
+    });
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key !== "Escape") return;
@@ -36,6 +41,9 @@ export function MobileMenu() {
 
     return () => {
       document.body.style.overflow = previousOverflow;
+      background.forEach((element) => {
+        element.removeAttribute("inert");
+      });
       document.removeEventListener("keydown", handleKeyDown);
       desktopQuery?.removeEventListener("change", handleViewportChange);
     };

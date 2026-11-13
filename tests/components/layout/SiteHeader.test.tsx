@@ -69,4 +69,23 @@ describe("SiteHeader", () => {
     await user.click(toggle);
     expect(document.body.style.overflow).toBe("");
   });
+
+  it("makes the rest of the page inert while the menu is open", async () => {
+    const user = userEvent.setup();
+    render(
+      <>
+        <SiteHeader />
+        <main>Page content</main>
+        <footer>Footer</footer>
+      </>,
+    );
+    const toggle = screen.getByRole("button", { name: /open menu/i });
+
+    await user.click(toggle);
+    expect(screen.getByRole("main", { hidden: true })).toHaveAttribute("inert");
+    expect(screen.getByRole("contentinfo", { hidden: true })).toHaveAttribute("inert");
+
+    await user.keyboard("{Escape}");
+    expect(screen.getByRole("main")).not.toHaveAttribute("inert");
+  });
 });

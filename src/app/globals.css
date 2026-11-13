@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #171b2c;
+  --color-muted: #656770;
+  --color-subtle: #6d7384;
+  --color-on-ink: #9e9faa;
+  --color-cream: #f9f8f3;
+  --color-primary: #3157f6;
+  --color-primary-strong: #2443c9;
+  --color-primary-soft: #e2e8ff;
+  --color-sun: #ffee7e;
+  --color-sun-strong: #ffe44d;
+  --color-sun-soft: #fff1c2;
+  --color-peach: #ffcb9f;
+  --color-coral: #ff704d;
+  --color-line: #dbdfeb;
+  --color-line-soft: #eaecef;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1rem;
+  --text-eyebrow--letter-spacing: 0.12em;
+
+  --shadow-card: 0 12px 32px -8px rgb(23 27 44 / 0.12);
+  --shadow-photo: 0 4px 12px rgb(23 27 44 / 0.12);
+
+  --animate-reveal: reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

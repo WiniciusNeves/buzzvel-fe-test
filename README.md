@@ -2,7 +2,7 @@
 
 A responsive landing page for **Luma**, a fictional learning platform, built from the Buzzvel FE Test 2026 Figma file.
 
-- **Live preview:** _add the Vercel URL here_
+- **Live preview:** [_Luna.website_](https://buzzvel-fe-test-eta.vercel.app/)
 - **Stack:** Next.js 16 (App Router) · React 19 · TypeScript (strict) · Tailwind CSS v4 · Zod · Vitest + React Testing Library
 
 ## Getting started
